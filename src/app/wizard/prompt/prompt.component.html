@@ -1,0 +1,20 @@
+<div class="form-group">
+        
+    if (string.IsNullOrEmpty(Model.Image))
+    
+        <div class="word-prompt">@Model.Word</div>
+        <p>Think about this word, in order to answer your challenge:</p>
+    
+    else
+    
+        <img src="@Model.Image" class="image-prompt" />
+        <p>Think about this image, in order to answer your challenge:</p>
+    
+    
+    <p class="challenge">@Model.Challenge</p>
+    <textarea asp-for="Answer" class="form-control" rows="6"></textarea>
+    <br />
+
+    <a routerLink="/wizard/prompt" class="btn btn-primary">Continue &gt;</a>
+    <a routerLink="/wizard/finish" class="btn btn-default">Finish now</a>
+</div>
