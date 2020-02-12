@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+
+.word-prompt {
+    font-size: 6em;
+    font-family: Arial;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.image-prompt {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    max-height: 300px;
+}
+
+.challenge {
+    font-weight: bold;
+}
+
+.explanation {
+    font-style: italic;
+}
+
+.wizard-header {
+    font-size: 1.5em;
+}
+
+.result {
+    white-space: pre;
+}

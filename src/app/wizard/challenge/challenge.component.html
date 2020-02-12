@@ -1,8 +1,8 @@
 <div class="form-group">
-    <label asp-for="Text">Describe your challenge or problem in the form of a question:</label>
-    <textarea asp-for="Text" rows="6" class="form-control"></textarea>
+    <label for="challenge">Describe your challenge or problem in the form of a question:</label>
+    <textarea id="challenge" rows="6" class="form-control" [(ngModel)]="challenge"></textarea>
     <span asp-validation-for="Text" class="text-danger"></span>
     <div class="explanation">
         <p>E.g. "what kind of garden game can I invent with one football and two golf clubs?" or "how can I kill off the main character's friend, without him knowing?", or "how can I make use of dice in my board game?". Be as concrete as possible! </p></div>
-    <a class="btn btn-primary" routerLink="/wizard/prompt">Continue &gt;</a>
+    <a class="btn btn-primary" (click)="submit()">Continue &gt;</a>
 </div>

@@ -10,6 +10,7 @@ import { WizardComponent } from './wizard/wizard.component';
 import { ChallengeComponent } from './wizard/challenge/challenge.component';
 import { PromptComponent } from './wizard/prompt/prompt.component';
 import { FinishComponent } from './wizard/finish/finish.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FinishComponent } from './wizard/finish/finish.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'help', component: HelpComponent},

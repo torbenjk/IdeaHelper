@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WizardDataService } from '../../wizard-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-challenge',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChallengeComponent implements OnInit {
 
-  constructor() { }
+  challenge: string;
+
+  constructor(private wizardDataService: WizardDataService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  submit() {
+      this.wizardDataService.challenge = this.challenge;
+      this.router.navigate(['/wizard/prompt']);
+  }
 }
