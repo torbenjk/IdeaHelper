@@ -9,12 +9,11 @@ import { FinishComponent } from './finish/finish.component';
 const routes: Routes = [
   {
     path: '', component: WizardComponent, children: [
-    
       {
         path: '', component: ChallengeComponent
       },
       {
-        path: 'prompt', component: PromptComponent
+        path: 'prompt/:step', component: PromptComponent
       },
       {
         path: 'finish', component: FinishComponent

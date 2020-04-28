@@ -1,0 +1,43 @@
+
+.word-prompt {
+    font-size: 6em;
+    font-family: Arial;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 20px;
+    /* width: 100%; */
+}
+
+/* .row .card { margin: 6px;} */
+
+.style1 { background-color: lightblue; color: white; }
+.style2 { background-color: darkolivegreen; color: white; }
+.style3 { background-color: lightgoldenrodyellow; color: black; }
+.style4 { background-color: gainsboro; color: black; }
+
+.image-prompt {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    max-height: 300px;
+}
+
+.challenge {
+    font-weight: bold;
+    font-size: 2em;
+    /* font-style: italic; */
+    padding: 10px;
+    height: 100%
+}
+
+.explanation {
+    font-style: italic;
+}
+
+.wizard-header {
+    font-size: 1.5em;
+}
+
+.result {
+    white-space: pre;
+}

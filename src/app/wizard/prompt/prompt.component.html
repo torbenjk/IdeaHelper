@@ -1,19 +1,25 @@
-<div class="form-group">
-        
-  
-        <div class="word-prompt">{{word}}</div>
-        <p>Think about this word, in order to answer your challenge:</p>
-    
+<div class="row" style="margin: 10px 0px;">
+    <div class="col-md-4">
+    <div class="challenge card style2"><p>{{challenge}}</p></div>
+</div>
+    <div class="col-md-8">
+        <div class="word-prompt card style1">{{word}}</div>        
+    </div>
+</div>
+<div class="row">
+<div class="md-col-12"><p>Think about this word, and your challenge. Write down your ideas.</p></div>
+<!--
+    <img src="@Model.Image" class="image-prompt" />
+    <p>Think about this image, in order to answer your challenge:</p>
+-->
 
-    <!--
-        <img src="@Model.Image" class="image-prompt" />
-        <p>Think about this image, in order to answer your challenge:</p>
-    -->
-    
-    <p class="challenge">{{challenge}}</p>
+</div>
+
+<div class="form-group">
+    <label>Ideas</label>
     <textarea class="form-control" rows="6" [(ngModel)]="ideas"></textarea>
     <br />
-
+Step {{step}} of 4
     <a class="btn btn-primary" (click)="submit()">Continue &gt;</a>
     <a class="btn btn-default" (click)="finish()">Finish now</a>
 </div>

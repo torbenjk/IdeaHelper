@@ -7,7 +7,7 @@ export class WizardDataService {
 
   challenge: string;
 
-  ideas: string[];
+  ideas: string[] = [];
 
   constructor() { }
 }

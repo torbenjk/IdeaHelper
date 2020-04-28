@@ -18,6 +18,6 @@ export class ChallengeComponent implements OnInit {
 
   submit() {
       this.wizardDataService.challenge = this.challenge;
-      this.router.navigate(['/wizard/prompt']);
+      this.router.navigate(['/wizard/prompt/1']);
   }
 }
