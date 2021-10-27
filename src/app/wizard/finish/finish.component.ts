@@ -14,7 +14,7 @@ export class FinishComponent implements OnInit {
   constructor(private wizardDataService: WizardDataService, private router: Router) { }
 
   ngOnInit(): void {
-    this.result = this.wizardDataService.ideas.reduce( (prev, current) => prev + '\n\r' + current);
+    this.result = this.wizardDataService.ideas.reduce( (prev, current) => prev + '\n' + current);
   }
 
 }

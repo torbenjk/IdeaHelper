@@ -50,7 +50,6 @@ export class PromptComponent implements OnInit {
   }
 
   finish(): void {
-    this.save();
     this.router.navigate(['/wizard/finish']);
   }
 
