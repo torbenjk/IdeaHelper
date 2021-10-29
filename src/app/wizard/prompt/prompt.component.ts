@@ -13,10 +13,12 @@ export class PromptComponent implements OnInit {
 
   challenge: string;
   word: string;
+  imageUrl: string;
   ideas: string;
   step: number;
   maxSteps = 4;
-
+  promptType: PromptType = PromptType.Word;
+  
   constructor(
     private promptService: PromptService, 
     private wizardDataService: WizardDataService, 
@@ -35,7 +37,19 @@ export class PromptComponent implements OnInit {
   doStep(step: number): void {
     this.ideas = '';
     this.step = step;
-    this.word = this.promptService.getPrompt();
+
+    if (Math.random() > 0.5) {
+      this.promptType = PromptType.Word;
+      this.word = this.promptService.getPrompt();
+      this.imageUrl = null;
+    }
+    else {    
+      this.promptType = PromptType.Image;
+      const imageCount = 30;
+      let num: number = Math.floor(Math.random()*imageCount);
+      this.imageUrl = `/assets/images/promptimages/promptimage${num}.jpg`
+      this.word = null;
+    }
   }
 
   submit() {
@@ -44,7 +58,6 @@ export class PromptComponent implements OnInit {
     if (+this.step > this.maxSteps) {
       this.finish();
     } else {
-    this.word = this.promptService.getPrompt();
     this.router.navigate(['/wizard/prompt/' + (this.step)]);
     }
   }
@@ -57,4 +70,27 @@ export class PromptComponent implements OnInit {
     this.wizardDataService.ideas.push(this.ideas);
   }
 
+  showWordPrompt(): boolean {
+    return this.promptType === PromptType.Word;
+  }
+  
+  showImagePrompt(): boolean {
+    return this.promptType === PromptType.Image;
+  }
+
+  share() {
+    // if (navigator.share) {
+    //   navigator.share({
+    //     title: 'WebShare API Demo',
+    //     url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+    //   }).then(() => {
+    //     console.log('Thanks for sharing!');
+    //   })
+    //   .catch(console.error);
+    // } else {
+    //   // fallback
+    // }
+  }
 }
+
+enum PromptType { Word, Image }
