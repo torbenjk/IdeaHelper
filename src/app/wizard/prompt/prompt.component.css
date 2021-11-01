@@ -1,5 +1,5 @@
 .word-prompt {
-    font-size: 7em;
+    font-size: 7vw;
     font-family: Arial;
     text-transform: capitalize;
     text-align: center;
@@ -7,17 +7,19 @@
 }
 
 .image-prompt {
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-prompt img {
-    width: 100%;
+    max-height: 400px;
 }
 
 .style1 { background-color: lightblue; color: white; }
 .style2 { background-color: darkolivegreen; color: white; }
 .style3 { background-color: lightgoldenrodyellow; color: black; }
-.style4 { background-color: gainsboro; color: black; }
+.style4 { background-color: black; color: gainsboro; }
 
 .challenge {
     font-weight: bold;

@@ -46,8 +46,8 @@ export class PromptComponent implements OnInit {
     else {    
       this.promptType = PromptType.Image;
       const imageCount = 30;
-      let num: number = Math.floor(Math.random()*imageCount);
-      this.imageUrl = `/assets/images/promptimages/promptimage${num}.jpg`
+      let num: number = Math.floor(Math.random()*imageCount)+1; 
+      this.imageUrl = `../../../assets/images/promptimages/promptimage${num}.jpg`
       this.word = null;
     }
   }

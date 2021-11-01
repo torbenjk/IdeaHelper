@@ -6,13 +6,13 @@
     </div>
     <div class="col-md-8">
         <div *ngIf="showWordPrompt()" class="word-prompt card style1">{{word}}</div>
-        <div *ngIf="showImagePrompt()" class="image-prompt"><img src="{{imageUrl}}" /></div>
+        <div *ngIf="showImagePrompt()" class="image-prompt card style4"><img src="{{imageUrl}}" class="img-fluid" /></div>
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="margin: 10px 0px;">
     <div class="md-col-12">
-        <p>Think about this {{showWordPrompt ? "word":"image"}}, and your challenge. Write down your ideas.</p>
+        <p>Think about this {{showWordPrompt() ? "word":"image"}}, and your challenge. Write down your ideas.</p>
     </div>
 </div>
 
