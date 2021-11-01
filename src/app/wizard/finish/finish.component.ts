@@ -10,11 +10,28 @@ import { Router } from '@angular/router';
 export class FinishComponent implements OnInit {
 
   result: string;
+  showShareButton: boolean;
 
   constructor(private wizardDataService: WizardDataService, private router: Router) { }
 
   ngOnInit(): void {
-    this.result = this.wizardDataService.ideas.reduce( (prev, current) => prev + '\n' + current);
+    if (this.wizardDataService.ideas.length > 0) {
+      this.result = this.wizardDataService.ideas.reduce( (prev, current) => prev + '\n' + current);
+    }
+    this.showShareButton = !!navigator.share;
+  }
+  
+  share() {
+    let sharableObject = {
+      title: 'Ideas created with IdeaHelper',
+      text: this.result
+    };
+    if (navigator.share()) {
+      navigator.share(sharableObject).then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+    }
   }
 
 }

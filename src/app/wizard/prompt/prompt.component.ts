@@ -77,20 +77,6 @@ export class PromptComponent implements OnInit {
   showImagePrompt(): boolean {
     return this.promptType === PromptType.Image;
   }
-
-  share() {
-    // if (navigator.share) {
-    //   navigator.share({
-    //     title: 'WebShare API Demo',
-    //     url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
-    //   }).then(() => {
-    //     console.log('Thanks for sharing!');
-    //   })
-    //   .catch(console.error);
-    // } else {
-    //   // fallback
-    // }
-  }
 }
 
 enum PromptType { Word, Image }
