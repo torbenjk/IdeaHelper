@@ -3,6 +3,6 @@
     <textarea id="challenge" rows="4" class="form-control" [(ngModel)]="challenge"></textarea>
     <span asp-validation-for="Text" class="text-danger"></span>
     <div class="explanation">
-        <p>E.g. "what kind of garden game can I invent with one football and two golf clubs?" or "how can I kill off the main character's friend, without him knowing?", or "how can I make use of dice in my board game?". Be as concrete as possible! </p></div>
-    <a class="btn btn-primary" (click)="submit()">Continue &gt;</a>
+        <p>E.g. "what kind of garden game can I invent with one football and two golf clubs?" or "how can I kill off the main character's friend, without him knowing?", or "how can I make use of dice in my board game?". Be as specific as possible! </p></div>
+    <button class="btn btn-primary" (click)="submit()" [disabled]="!enableContinueButton()">Continue &gt;</button>
 </div>

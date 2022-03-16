@@ -16,6 +16,11 @@ export class ChallengeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  enableContinueButton(): boolean {
+    return this.challenge?.length > 0;
+  }
+
   submit() {
       this.wizardDataService.challenge = this.challenge;
       this.router.navigate(['/wizard/prompt/1']);

@@ -38,7 +38,7 @@ export class PromptComponent implements OnInit {
     this.ideas = '';
     this.step = step;
 
-    if (Math.random() > 0.5) {
+    if (Math.random() > 0.4) {
       this.promptType = PromptType.Word;
       this.word = this.promptService.getPrompt();
       this.imageUrl = null;
