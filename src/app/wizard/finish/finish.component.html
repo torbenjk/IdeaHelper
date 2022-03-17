@@ -1,18 +1,26 @@
-<h2>You are done!</h2>
-<p>Here are your ideas: </p>
+<div class="row">
+<div class="col-md-10 col-xs-12">
+    <h2>You are done!</h2>
+    <p>Here are the ideas you wrote down: </p>
 
-<div class="panel panel-default">
+    <div class=" panel panel-default">
     <div class="panel-body">
         <span class="result" style="white-space: pre;">{{result}}</span>
     </div>
 </div>
 
 <br />
-<p>Make sure to copy the ideas to a document. They won't be saved automatically.</p>
+<p>Make sure to copy the ideas to a document now. They won't be saved anywhere.</p>
 
 <div class="form-group">
-   
-    <a class="btn btn-primary" href="#" role="button" routerLink="/wizard">Try again</a>
-    <a class="btn btn-default" href="#" role="button" onClick="share()"  *ngIf="showShareButton">Share</a>
 
+    <a class="btn btn-primary btn-lg" href="#" role="button" routerLink="/wizard">Try again</a>
+    <a class="btn btn-default btn-lg" href="#" role="button" onClick="share()" *ngIf="showShareButton">Share</a>
+
+</div>
+</div>
+
+<div class="col-md-2 col-xs-12">
+   <donate></donate>
+</div>
 </div>

@@ -11,11 +11,14 @@ import { ChallengeComponent } from './wizard/challenge/challenge.component';
 import { PromptComponent } from './wizard/prompt/prompt.component';
 import { FinishComponent } from './wizard/finish/finish.component';
 import { FormsModule } from '@angular/forms';
+import { DonateComponent } from './donate/donate.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HelpComponent,
+    DonateComponent,
     FrontpageComponent,
     WizardComponent,
     ChallengeComponent,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WizardDataService } from '../../wizard-data.service';
 import { Router } from '@angular/router';
+import { DonateComponent } from 'src/app/donate/donate.component';
 
 @Component({
   selector: 'app-finish',
